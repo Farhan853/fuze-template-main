@@ -1,0 +1,1519 @@
+<div
+    class="sidebar z-[40] bg-white border-r border-solid border-gray-1400 fixed left-0 top-0 h-full xl:max-w-[200px] md:max-w-[150px] sm:max-w-[75px] max-w-[55px] w-full flex justify-between flex-col">
+    <div class="border-b border-solid border-gray-1400 md:min-h-[100px] min-h-[60px]">
+
+        <a class="bg-gray-1300 head-arrow rounded-full sm:w-[30px] w-[20px] sm:h-[30px] h-[20px] flex items-center justify-center absolute sm:-right-3.5 -right-2.5 sm:top-4 top-5"
+            (click)="toggleSidebar()"> <img src="assets/images/left-arrow2.svg" alt=""
+                style="height: 15px !important ; width: 15px !important;" />
+        </a>
+
+        <a  class="flex items-center justify-center md:px-5 px-2.5 md:py-[35px] py-0 h-full">
+            <svg class="logo-big md:block hidden" width="120" height="30" viewBox="0 0 120 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="logo-path"
+                    d="M21.1953 23.5637C19.7685 21.2283 17.9475 18.646 15.7322 15.8549L24.1802 3.15234H17.4969L12.4281 10.7663L7.47186 3.15234H0.375488L8.8611 16.1397C7.0213 18.608 5.36923 20.9245 3.86735 23.108C3.79226 23.203 3.73594 23.2979 3.67962 23.3928L7.73469 27.4941C8.20402 26.6587 8.71091 25.8422 9.23656 25.0637C9.76222 24.2853 10.3067 23.5447 10.8511 22.8422C11.3955 22.1397 11.8273 21.608 12.184 21.2093C13.3104 22.2536 14.3054 23.5258 15.1878 25.0258C16.0513 26.5258 16.8586 28.0068 17.5908 29.4878H24.5933C23.7672 27.8739 22.6408 25.9182 21.1953 23.5637Z"
+                    fill="#1E1E1E"></path>
+
+                <path class="logo-path"
+                    d="M25.5317 19.6338C25.5317 17.868 25.7946 16.311 26.339 14.9819C26.8834 13.6528 27.578 12.5515 28.4604 11.6591C29.3428 10.7667 30.3377 10.1021 31.4829 9.64643C32.6281 9.19074 33.7921 8.96289 34.9936 8.96289C37.7908 8.96289 40.0061 9.83631 41.6394 11.5642C43.2727 13.292 44.0799 15.8553 44.0799 19.2161C44.0799 19.5388 44.0612 19.8996 44.0424 20.2983C44.0236 20.6971 43.9861 21.0388 43.9673 21.3426H31.2764C31.4078 22.5009 31.9335 23.4312 32.8909 24.1148C33.8484 24.7983 35.125 25.1401 36.7207 25.1401C37.7533 25.1401 38.7483 25.0452 39.7433 24.8553C40.7382 24.6654 41.5455 24.4376 42.165 24.1528L42.916 28.7477C42.6156 28.8996 42.2213 29.0515 41.7145 29.2034C41.2076 29.3553 40.6632 29.4882 40.0436 29.6021C39.4241 29.7161 38.767 29.811 38.0724 29.8869C37.3778 29.9629 36.6644 30.0009 35.9698 30.0009C34.1863 30.0009 32.6469 29.735 31.3327 29.2034C30.0186 28.6718 28.9297 27.9502 28.0662 27.0199C27.2026 26.0895 26.5643 25.0072 26.1513 23.735C25.7382 22.4629 25.5317 21.0958 25.5317 19.6338ZM38.6732 17.4692C38.6544 16.9945 38.5605 16.5199 38.4291 16.0642C38.2977 15.6085 38.0724 15.2097 37.7908 14.849C37.5092 14.4882 37.1337 14.2034 36.702 13.9755C36.2702 13.7477 35.7257 13.6338 35.0687 13.6338C34.4491 13.6338 33.9047 13.7477 33.4541 13.9566C33.0036 14.1654 32.6281 14.4502 32.3277 14.811C32.0274 15.1718 31.8021 15.5705 31.6331 16.0452C31.4642 16.5199 31.3515 16.9945 31.2764 17.4692H38.6732Z"
+                    fill="#1E1E1E"></path>
+                <path class="logo-path"
+                    d="M55.4568 24.8363C55.0625 24.6654 54.7434 24.4375 54.5369 24.1527C54.3304 23.8679 54.1802 23.5261 54.1051 23.1274C54.03 22.7287 53.9924 22.273 53.9924 21.7603V9.60842L48.3979 3.9502V22.8996C48.3979 23.9629 48.5106 24.9122 48.7171 25.7666C48.9236 26.6211 49.3366 27.3426 49.9186 27.9312C50.5006 28.5198 51.3078 28.9945 52.3216 29.3173C53.3354 29.6401 54.6495 29.8299 56.2828 29.8489L57.0713 25.178C56.3954 25.1211 55.851 25.0072 55.4568 24.8363Z"
+                    fill="#1E1E1E"></path>
+                <path class="logo-path"
+                    d="M59.3242 19.6338C59.3242 17.868 59.587 16.311 60.1315 14.9819C60.6759 13.6528 61.3705 12.5515 62.2529 11.6591C63.1352 10.7667 64.1302 10.1021 65.2754 9.64643C66.4206 9.19074 67.5845 8.96289 68.786 8.96289C71.5833 8.96289 73.7986 9.83631 75.4319 11.5642C77.0651 13.292 77.8724 15.8553 77.8724 19.2161C77.8724 19.5388 77.8536 19.8996 77.8349 20.2983C77.8161 20.6971 77.7785 21.0388 77.7598 21.3426H65.0689C65.2003 22.5009 65.726 23.4312 66.6834 24.1148C67.6409 24.7983 68.9175 25.1401 70.5132 25.1401C71.5457 25.1401 72.5407 25.0452 73.5357 24.8553C74.5307 24.6654 75.338 24.4376 75.9575 24.1528L76.7085 28.7477C76.4081 28.8996 76.0138 29.0515 75.507 29.2034C75.0001 29.3553 74.4556 29.4882 73.8361 29.6021C73.2166 29.7161 72.5595 29.811 71.8649 29.8869C71.1703 29.9629 70.4569 30.0009 69.7623 30.0009C67.9788 30.0009 66.4394 29.735 65.1252 29.2034C63.8111 28.6718 62.7222 27.9502 61.8586 27.0199C60.9951 26.0895 60.3568 25.0072 59.9437 23.735C59.5307 22.4629 59.3242 21.0958 59.3242 19.6338ZM72.4656 17.4692C72.4469 16.9945 72.353 16.5199 72.2216 16.0642C72.0902 15.6085 71.8649 15.2097 71.5833 14.849C71.3017 14.4882 70.9262 14.2034 70.4944 13.9755C70.0626 13.7477 69.5182 13.6338 68.8611 13.6338C68.2416 13.6338 67.6972 13.7477 67.2466 13.9566C66.7961 14.1654 66.4206 14.4502 66.1202 14.811C65.8198 15.1718 65.5946 15.5705 65.4256 16.0452C65.2566 16.5199 65.144 16.9945 65.0689 17.4692H72.4656Z"
+                    fill="#1E1E1E"></path>
+
+                <path class="logo-path"
+                    d="M89.2865 8.96289C90.9386 8.96289 92.309 9.15276 93.4167 9.53251C94.5243 9.91226 95.4066 10.4629 96.0637 11.1654C96.7208 11.868 97.1901 12.7414 97.4717 13.7477C97.7533 14.754 97.8847 15.8933 97.8847 17.1274V28.8996C97.0775 29.0705 95.9698 29.2793 94.5431 29.5262C93.1163 29.773 91.3891 29.8869 89.3616 29.8869C88.085 29.8869 86.921 29.773 85.8885 29.5452C84.856 29.3173 83.9548 28.9376 83.2039 28.4249C82.453 27.9123 81.871 27.2287 81.4767 26.3933C81.0825 25.5578 80.876 24.5325 80.876 23.3173C80.876 22.1591 81.1013 21.1718 81.5706 20.3553C82.0399 19.5388 82.6595 18.8933 83.4292 18.4186C84.1989 17.9439 85.1 17.5831 86.095 17.3743C87.09 17.1654 88.1413 17.0515 89.2114 17.0515C89.9436 17.0515 90.5819 17.0895 91.1451 17.1464C91.7083 17.2034 92.1588 17.2983 92.5155 17.3933V16.8616C92.5155 15.8933 92.2339 15.1338 91.6519 14.5452C91.07 13.9566 90.075 13.6718 88.6482 13.6718C87.6907 13.6718 86.7521 13.7477 85.8322 13.8806C84.9123 14.0135 84.105 14.2224 83.4292 14.4692L82.7158 9.91226C83.0349 9.81732 83.4479 9.7034 83.9361 9.58947C84.4242 9.47555 84.9498 9.38061 85.5318 9.28568C86.1138 9.19074 86.7145 9.11479 87.3528 9.05783C87.9911 9.00087 88.6294 8.96289 89.2865 8.96289ZM89.7371 25.5199C90.2815 25.5199 90.8071 25.5009 91.314 25.4819C91.8209 25.4629 92.2151 25.4249 92.5155 25.368V21.0768C92.2902 21.0199 91.9523 20.9819 91.5018 20.9249C91.0512 20.868 90.6382 20.849 90.2627 20.849C89.7371 20.849 89.2489 20.8869 88.7796 20.9439C88.3103 21.0009 87.916 21.1338 87.5593 21.3047C87.2026 21.4755 86.9398 21.7224 86.7333 22.0262C86.5268 22.33 86.4329 22.7097 86.4329 23.1654C86.4329 24.0578 86.7333 24.6654 87.3153 25.0072C87.8973 25.349 88.7045 25.5199 89.7371 25.5199Z"
+                    fill="#1E1E1E"></path>
+
+                <path class="logo-path"
+                    d="M119.587 14.4685C119.305 13.3482 118.855 12.3988 118.198 11.5824C117.541 10.7659 116.658 10.1394 115.551 9.70264C114.443 9.26593 113.035 9.03809 111.364 9.03809C109.712 9.03809 108.135 9.15201 106.633 9.39885C105.131 9.64568 103.911 9.89252 102.954 10.1773V29.4685H108.548V14.0507C108.905 13.9938 109.299 13.9558 109.75 13.9178C110.2 13.8799 110.632 13.8609 111.026 13.8609C112.322 13.8609 113.223 14.2406 113.692 15.0001C114.161 15.7596 114.405 17.0507 114.405 18.8735V26.4495L120 20.7912V18.19C120 16.8229 119.869 15.5887 119.587 14.4685Z"
+                    fill="#1E1E1E"></path>
+
+                <path class="path" d="M6.68335 29.468H0C0.732165 28.0819 1.5582 26.6579 2.4781 25.2148L6.68335 29.468Z"
+                    fill="#00AB9D"></path>
+                <path class="path" d="M53.9924 0V6.56962L48.3979 0.911392L53.9924 0Z" fill="#8CBF43"></path>
+                <path class="path" d="M120 23.8105V29.4688H114.405L120 23.8105Z" fill="#9F1461"></path>
+            </svg>
+            <svg class="logo-small md:hidden block sm:h-auto h-[18px]" width="25" height="26" viewBox="0 0 25 26"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="logo-path"
+                    d="M21.5457 20.1514C20.0953 17.8457 18.2442 15.2963 15.9923 12.5407L24.5801 0H17.7862L12.6335 7.51694L7.59533 0H0.381592L9.00755 12.8219C7.13732 15.2588 5.45793 17.5458 3.93121 19.7015C3.85487 19.7952 3.79762 19.889 3.74037 19.9827L7.86251 24.0317C8.33961 23.2069 8.85487 22.4009 9.38923 21.6323C9.92358 20.8637 10.477 20.1327 11.0304 19.4391C11.5839 18.7455 12.0228 18.2206 12.3854 17.827C13.5304 18.858 14.5419 20.1139 15.4388 21.5948C16.3167 23.0757 17.1373 24.5379 17.8816 26H24.9999C24.1602 24.4066 23.0152 22.4758 21.5457 20.1514Z"
+                    fill="#1E1E1E"></path>
+                <path class="path"
+                    d="M6.79389 25.9812H0C0.744275 24.6128 1.58397 23.2069 2.51908 21.7822L6.79389 25.9812Z"
+                    fill="#00AB9D"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="xl:px-5 md:px-2.5 px-1 py-8 h-full navigation">
+        <ul>
+            <li class="mb-2.5" (click)="openModal('home')"><a
+                    class="navi-link flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 sm:h-[52px] h-11 rounded-[10px] hover:bg-sea-green-1100 hover:text-white"
+                    style="cursor: pointer;"><span
+                        class="w-6 xl:mr-2.5 md:mr-1.5 mr-0 flex items-center justify-center">
+                        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                                <path
+                                    d="M19 9.1877V20.5877C19 20.7877 18.8 20.9877 18.6 20.9877H13C12.7 20.9877 12.6 20.7877 12.6 20.5877V17.4877C12.6 16.0877 11.5 14.9877 10.1 14.9877C8.7 14.9877 7.6 16.0877 7.6 17.4877V20.5877C7.6 20.7877 7.4 20.9877 7.2 20.9877H1.4C1.2 20.9877 1 20.7877 1 20.5877V9.28769C1 9.18769 1.1 9.08769 1.1 8.98769L9.9 1.0877C10 0.987695 10.3 0.987695 10.5 1.0877L19 8.98769C19 8.98769 19 9.0877 19 9.1877Z"
+                                    stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <path class="path-fill"
+                                d="M11.1 11.5875C11 11.2875 10.8 10.9875 10.6 10.6875C10.4 10.3875 10.2 10.0875 10 9.8875C9.9 9.9875 9.8 10.0875 9.7 10.1875C9.6 10.2875 9.4 10.4875 9.4 10.5875C9.3 10.6875 9.2 10.8875 9.1 11.0875C9 11.2875 8.9 11.3875 8.9 11.4875H7.5C7.8 11.0875 8 10.6875 8.3 10.1875C8.6 9.7875 8.9 9.2875 9.3 8.7875L7.5 6.1875H8.9L9.9 7.7875L11 6.1875H12.4L10.6 8.7875C11 9.3875 11.4 9.8875 11.7 10.3875C12 10.8875 12.2 11.2875 12.4 11.5875H11.1Z"
+                                fill="#1E1E1E" fill-opacity="0.4" />
+                        </svg>
+                    </span>
+                    <p class="md:block hidden"> Home </p>
+                </a></li>
+
+            <li class="mb-2.5" (click)="openModal('archvio')"><a
+                    class="navi-link flex items-center md:justify-start justify-center text-black-1200/[0.4] font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 sm:h-[52px] h-11  rounded-[10px] hover:bg-sea-green-1100 hover:text-white"
+                    style="cursor: pointer;"><span class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+
+                    </span>
+                    <p class="md:block hidden"> Archivio</p>
+                </a></li>
+
+            <li class="mb-2.5" (click)="openModal('Workspace')">
+                <a
+                    class="navi-link flex items-center md:justify-start justify-center text-black-1200/[0.4] font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 sm:h-[52px] h-11 rounded-[10px] hover:bg-sea-green-1100 hover:text-white">
+                    <span class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3499 14.5H1.6499C3.9099 10.23 6.4999 5.9 9.3499 1.5L22.3499 14.5Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-miterlimit="10"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <p class="md:block hidden"> Workspace </p>
+                </a>
+            </li>
+
+            <li class="mb-2.5" (click)="openModal('Report')"><a
+                    class="navi-link flex items-center md:justify-start justify-center text-black-1200/[0.4] font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 sm:h-[52px] h-11 rounded-[10px]   hover:bg-sea-green-1100 hover:text-white"><span
+                        class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                        <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.2804 7.13859C18.8704 0.508593 13.0304 1.00859 13.0304 1.00859C7.04043 1.22859 3.15043 5.33859 1.71043 7.13859C1.35043 7.56859 1.35043 8.28859 1.71043 8.72859C6.83043 15.2886 13.0304 14.9986 13.0304 14.9986C19.1604 15.0686 22.9804 10.6686 24.3504 8.7986C24.6404 8.2186 24.6404 7.56859 24.2804 7.13859Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path class="path-fill"
+                                d="M14.2604 11.0284C14.1204 10.6684 13.9004 10.3084 13.6804 10.0184C13.4604 9.72836 13.2504 9.36836 12.9604 9.14836C12.8904 9.21836 12.7404 9.36836 12.6704 9.50836C12.6004 9.64836 12.3804 9.86836 12.3104 10.0084C12.2404 10.1484 12.0904 10.3684 11.9504 10.5884C11.8104 10.8084 11.7304 10.9484 11.7304 11.0184H10.1504C10.4404 10.5184 10.7304 10.0084 11.0904 9.50836C11.4504 9.00836 11.8104 8.42836 12.2404 7.84836L10.2204 4.81836H11.8804L13.0304 6.61836L14.2604 4.81836H15.8504L13.8304 7.77837C14.3304 8.42837 14.7704 9.00837 15.1304 9.57837C15.4904 10.1584 15.7104 10.5884 15.9204 10.9484L14.2604 11.0284Z"
+                                fill="#1E1E1E" fill-opacity="0.4" />
+                        </svg>
+                    </span>
+                    <p class="md:block hidden">Report</p>
+                </a></li>
+            <li (click)="openModal('Supporto')"><a
+                    class="navi-link flex items-center md:justify-start justify-center text-black-1200/[0.4] font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 sm:h-[52px] h-11 rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                        class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 3.56V10.31C21 11.69 19.88 12.81 18.5 12.81H7.43C6.56 12.81 5.74 13.25 5.31 14L1 21V3.5C1 2.12 2.12 1 3.5 1H18.5C19.87 1.06 21 2.12 21 3.56Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M7.18994 8.55957C7.8803 8.55957 8.43994 7.99993 8.43994 7.30957C8.43994 6.61921 7.8803 6.05957 7.18994 6.05957C6.49958 6.05957 5.93994 6.61921 5.93994 7.30957C5.93994 7.99993 6.49958 8.55957 7.18994 8.55957Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M11.0601 8.55957C11.7504 8.55957 12.3101 7.99993 12.3101 7.30957C12.3101 6.61921 11.7504 6.05957 11.0601 6.05957C10.3697 6.05957 9.81006 6.61921 9.81006 7.30957C9.81006 7.99993 10.3697 8.55957 11.0601 8.55957Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M14.9399 8.55957C15.6303 8.55957 16.1899 7.99993 16.1899 7.30957C16.1899 6.61921 15.6303 6.05957 14.9399 6.05957C14.2496 6.05957 13.6899 6.61921 13.6899 7.30957C13.6899 7.99993 14.2496 8.55957 14.9399 8.55957Z"
+                                stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <p class="md:block hidden"> Supporto</p>
+                </a></li>
+        </ul>
+    </div>
+
+    <div class="xl:p-5 md:p-3 p-0 sidbar-member">
+        <div class="bg-purple-1100 md:rounded-2xl rounded-xl md:py-4 py-2.5 md:px-2.5 px-1 sidbar-member-inner">
+            <h4 class="text-white font-bold md:mb-3 mb-1.5 font-Ubuntu sm:text-base text-xs leading-[120%] text-center">
+                Free <br> Member</h4>
+            <a href="#"
+                class="text-purple-1100 font-Ubuntu font-bold md:text-sm sm:text-[10px] text-[8px] flex items-center justify-center bg-white sm:rounded-[10px] rounded-sm sm:h-[30px] h-[22px] max-w-[91px] w-full mx-auto">Passa
+                a pro</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- ...........................Modals................-->
+
+<!------- START FROM MODAL ------------->
+
+<!-- Main modal -->
+
+<div class="overly bg-black/[0.5] fixed top-0 left-0 right-0 w-full h-full z-[100]"></div>
+<div tabindex="-1"
+    class="modal-qui fixed top-0 left-0 right-0 z-[200] flex items-start justify-center w-full pt-[100px] px-4 pb-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[123px] top-[129px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]"
+        [hidden]="isHomeVisible">
+        <a
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 w-full h-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0 flex items-center justify-center">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.4">
+                        <path
+                            d="M19 9.1877V20.5877C19 20.7877 18.8 20.9877 18.6 20.9877H13C12.7 20.9877 12.6 20.7877 12.6 20.5877V17.4877C12.6 16.0877 11.5 14.9877 10.1 14.9877C8.7 14.9877 7.6 16.0877 7.6 17.4877V20.5877C7.6 20.7877 7.4 20.9877 7.2 20.9877H1.4C1.2 20.9877 1 20.7877 1 20.5877V9.28769C1 9.18769 1.1 9.08769 1.1 8.98769L9.9 1.0877C10 0.987695 10.3 0.987695 10.5 1.0877L19 8.98769C19 8.98769 19 9.0877 19 9.1877Z"
+                            stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                    <path class="path-fill"
+                        d="M11.1 11.5875C11 11.2875 10.8 10.9875 10.6 10.6875C10.4 10.3875 10.2 10.0875 10 9.8875C9.9 9.9875 9.8 10.0875 9.7 10.1875C9.6 10.2875 9.4 10.4875 9.4 10.5875C9.3 10.6875 9.2 10.8875 9.1 11.0875C9 11.2875 8.9 11.3875 8.9 11.4875H7.5C7.8 11.0875 8 10.6875 8.3 10.1875C8.6 9.7875 8.9 9.2875 9.3 8.7875L7.5 6.1875H8.9L9.9 7.7875L11 6.1875H12.4L10.6 8.7875C11 9.3875 11.4 9.8875 11.7 10.3875C12 10.8875 12.2 11.2875 12.4 11.5875H11.1Z"
+                        fill="#1E1E1E" fill-opacity="0.4"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Home </p>
+        </a>
+    </span>
+
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[185px] top-[129px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]"
+        [hidden]="isArchivioVisible">
+        <a
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+            </span>
+            <p class="md:block hidden"> Archivio</p>
+        </a>
+    </span>
+
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[244px] top-[255px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]"
+        [hidden]="isWorkspaceVisible">
+        <a
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3499 14.5H1.6499C3.9099 10.23 6.4999 5.9 9.3499 1.5L22.3499 14.5Z" stroke="#1E1E1E"
+                        stroke-opacity="0.4" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+
+            </span>
+            <p class="md:block hidden"> Workspace</p>
+        </a>
+    </span>
+
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[306px] top-[315px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]"
+        [hidden]="isReportVisible">
+        <a
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.2804 7.13859C18.8704 0.508593 13.0304 1.00859 13.0304 1.00859C7.04043 1.22859 3.15043 5.33859 1.71043 7.13859C1.35043 7.56859 1.35043 8.28859 1.71043 8.72859C6.83043 15.2886 13.0304 14.9986 13.0304 14.9986C19.1604 15.0686 22.9804 10.6686 24.3504 8.7986C24.6404 8.2186 24.6404 7.56859 24.2804 7.13859Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                    <path class="path-fill"
+                        d="M14.2604 11.0284C14.1204 10.6684 13.9004 10.3084 13.6804 10.0184C13.4604 9.72836 13.2504 9.36836 12.9604 9.14836C12.8904 9.21836 12.7404 9.36836 12.6704 9.50836C12.6004 9.64836 12.3804 9.86836 12.3104 10.0084C12.2404 10.1484 12.0904 10.3684 11.9504 10.5884C11.8104 10.8084 11.7304 10.9484 11.7304 11.0184H10.1504C10.4404 10.5184 10.7304 10.0084 11.0904 9.50836C11.4504 9.00836 11.8104 8.42836 12.2404 7.84836L10.2204 4.81836H11.8804L13.0304 6.61836L14.2604 4.81836H15.8504L13.8304 7.77837C14.3304 8.42837 14.7704 9.00837 15.1304 9.57837C15.4904 10.1584 15.7104 10.5884 15.9204 10.9484L14.2604 11.0284Z"
+                        fill="#1E1E1E" fill-opacity="0.4"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Report</p>
+        </a>
+    </span>
+
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[370px] top-[375px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]"
+        [hidden]="isSupportoVisible">
+        <a
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3  h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 3.56V10.31C21 11.69 19.88 12.81 18.5 12.81H7.43C6.56 12.81 5.74 13.25 5.31 14L1 21V3.5C1 2.12 2.12 1 3.5 1H18.5C19.87 1.06 21 2.12 21 3.56Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M7.18994 8.55957C7.8803 8.55957 8.43994 7.99993 8.43994 7.30957C8.43994 6.61921 7.8803 6.05957 7.18994 6.05957C6.49958 6.05957 5.93994 6.61921 5.93994 7.30957C5.93994 7.99993 6.49958 8.55957 7.18994 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M11.0601 8.55957C11.7504 8.55957 12.3101 7.99993 12.3101 7.30957C12.3101 6.61921 11.7504 6.05957 11.0601 6.05957C10.3697 6.05957 9.81006 6.61921 9.81006 7.30957C9.81006 7.99993 10.3697 8.55957 11.0601 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M14.9399 8.55957C15.6303 8.55957 16.1899 7.99993 16.1899 7.30957C16.1899 6.61921 15.6303 6.05957 14.9399 6.05957C14.2496 6.05957 13.6899 6.61921 13.6899 7.30957C13.6899 7.99993 14.2496 8.55957 14.9399 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Supporto</p>
+        </a>
+    </span>
+
+    <div class="relative w-full max-w-[580px] max-h-full">
+        <span
+            class="absolute lg:block hidden 2xl:left-[-245px] xl:left-[-125px] left-[-74px] 2xl:top-[-26px] top-0 2xl:w-auto xl:w-[120px] w-[70px]"
+            [hidden]="isHomeVisible">
+            <img src="assets/images/dashboard-arrow.svg" alt="" /></span>
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-225px] xl:left-[-125px] left-[-60px] xl:top-20 top-10 2xl:w-auto xl:w-[120px] w-[58px]"
+            [hidden]="isArchivioVisible">
+            <img src="assets/images/archivio-arrow.svg" alt=""></span>
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-232px] xl:left-[-125px] left-[-60px] xl:top-[146px] top-[170px] 2xl:w-auto xl:w-[120px] w-[58px]"
+            [hidden]="isWorkspaceVisible">
+            <img src="assets/images/workspace-arrow.svg" alt=""></span>
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-232px] xl:left-[-125px] left-[-60px] xl:top-[172px] top-[215px] 2xl:w-auto xl:w-[120px] w-[58px]"
+            [hidden]="isReportVisible">
+            <img src="assets/images/report-arrow.svg" alt=""></span>
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-200px] xl:left-[-119px] left-[-60px] 2xl:top-[150px] xl:top-[180px] top-[210px] 2xl:w-auto xl:w-[120px] w-[58px]"
+            [hidden]="isSupportoVisible">
+            <img src="assets/images/supporto-arrow.svg" alt=""></span>
+
+
+        <div class="relative bg-white rounded-[20px]">
+            <div class="px-5 sm:pt-[90px] pt-[60px] pb-[30px] relative">
+                <button type="button" class="flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 absolute sm:top-[25px] top-4 sm:right-[25px]
+                     right-4 close-btn">
+                    <img src="assets/images/btn-close.svg" alt="" (click)="closeModal()" />
+                </button>
+
+                <div [hidden]="isHomeVisible">
+                    <h4
+                        class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                        Inizia
+                        da qui!</h4>
+                    <p
+                        class="text-black-1200 mt-6 mb-8 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[320px] max-w-[280px] w-full mx-auto">
+                        Gestisci file o progetti di lavoro, crea il tuo team, scopri news e tutorial: in <strong
+                            class="font-bold">
+                            Home </strong> hai tutti gli strumenti per cominciare!
+                    </p>
+                </div>
+
+                <div [hidden]="isArchivioVisible">
+                    <h4
+                        class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                        Organizza i tuoi file!</h4>
+                    <p
+                        class="text-black-1200 mt-6 mb-8 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[405px] max-w-[332px] w-full mx-auto">
+                        Qui in <strong class="font-bold">
+                            Archivio </strong> troverai tutti <br> gli elementi su cui hai lavorato in Xelean.
+                        Modificali,
+                        definiscili
+                        meglio con i tag… o elimina ciò che non ti serve.
+                    </p>
+
+                </div>
+
+                <div [hidden]="isWorkspaceVisible">
+
+                    <h4
+                        class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                        Sei
+                        nel
+                        cuore di Xelean!</h4>
+                    <p
+                        class="text-black-1200 3xl:mt-6 mt-4 sm:mb-2.5 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[405px] max-w-[332px] w-full mx-auto">
+                        Niente celle, tabelle, formule… <br> nel Workspace puoi mettere <br> in relazione i tuoi file
+                        grazie ai
+                        thread. Scopriamo di più!
+                    </p>
+
+                    <div class="sm:mb-6 mb-6">
+                        <video class="w-full xs:h-[257px] h-[180px]" autoplay="" muted="" loop="">
+                            <source src="assets/images/video/tutorial_FS_1.mp4" type="video/mp4">
+                            <source src="assets/images/video/tutorial_FS_1.mp4" type="video/ogg">
+                            Your browser does not support HTML video.
+                        </video>
+                    </div>
+
+                </div>
+
+                <div [hidden]="isReportVisible">
+                    <h4
+                        class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                        Genera
+                        risultati!</h4>
+                    <p
+                        class="text-black-1200 mt-6 sm:mb-8 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[452px] max-w-[332px] w-full mx-auto">
+                        Quando avrai ottenuto risultati soddisfacenti, Xelean ti darà modo di visualizzarli in
+                        <strong>report
+                            multidimensionali. </strong><br>
+                        Ti abbiamo incuriosito? Ci stiamo ancora lavorando, ma presto avremo aggiornamenti!
+                    </p>
+
+                </div>
+
+                <div [hidden]="isSupportoVisible">
+
+                    <h4
+                        class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                        Problemi? No problem!
+                    </h4>
+                    <p
+                        class="text-black-1200 mt-6 sm:mb-8 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[452px] max-w-[332px] w-full mx-auto">
+                        Xelean è una piattaforma in continuo sviluppo: i problemi sono normali (ahinoi!) e ogni tua
+                        segnalazione è
+                        preziosa. Qui trovi <strong> tutti i modi per contattarci.</strong>
+                    </p>
+                </div>
+
+                <a
+                    class="bg-sea-green-1100 rounded-[10px] h-12 max-w-[127px] w-full flex items-center justify-center text-white font-Ubuntu font-medium text-base mx-auto">Avanti
+                    <img src="assets/images/arrow-right.svg" alt="" class="ml-2.5"
+                        style="width: 15px !important; height: 15px !important;" /></a>
+
+                <ul class="flex items-center justify-center sm:mt-[74px] mt-10">
+                    <li class="px-2"><a [class.bg-sea-green-1100]="!isHomeVisible"
+                            class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a [class.bg-sea-green-1100]="!isArchivioVisible"
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a [class.bg-sea-green-1100]="!isWorkspaceVisible"
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a [class.bg-sea-green-1100]="!isReportVisible"
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a [class.bg-sea-green-1100]="!isSupportoVisible"
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-------------------->
+
+<!-- <div tabindex="-1"
+    class="modal-qui fixed top-0 left-0 right-0 z-[200] flex items-start justify-center w-full pt-[100px] px-4 pb-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[185px] top-[129px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]">
+        <a href="archivio.html"
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="path-fill"
+                        
+                        fill="#1E1E1E" fill-opacity="0.4"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Archivio</p>
+        </a>
+    </span>
+    <div class="relative w-full max-w-[580px] max-h-full">
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-225px] xl:left-[-125px] left-[-60px] xl:top-20 top-10 2xl:w-auto xl:w-[120px] w-[58px]">
+            <img src="assets/images/archivio-arrow.svg" alt=""></span>
+
+        <div class="relative bg-white rounded-[20px]">
+            <div class="px-5 sm:pt-[90px] pt-[60px] pb-[30px] relative">
+                <button type="button"
+                    class="flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 absolute sm:top-[25px] top-4 sm:right-[25px] right-4 close-btn">
+                    <img src="assets/images/btn-close.svg" alt="">
+                </button>
+                <h4 class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                    Organizza i tuoi file!</h4>
+                <p
+                    class="text-black-1200 mt-6 mb-8 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[405px] max-w-[332px] w-full mx-auto">
+                    Qui in <strong class="font-bold">
+                        Archivio </strong> troverai tutti <br> gli elementi su cui hai lavorato in Xelean. Modificali,
+                    definiscili
+                    meglio con i tag… o elimina ciò che non ti serve.
+                </p>
+                <a href="workspace.html"
+                    class="bg-sea-green-1100 rounded-[10px] h-12 max-w-[127px] w-full flex items-center justify-center text-white font-Ubuntu font-medium text-base mx-auto">Avanti
+                    <img src="assets/images/arrow-right.svg" alt="" class="ml-2.5"
+                        style="width: 15px !important; height: 15px !important;"></a>
+                <ul class="flex items-center justify-center sm:mt-[74px] mt-10">
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="dashboard.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="archivio.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="#"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="#"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="#"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-------------------->
+
+<!-- <div tabindex="-1"
+    class="modal-qui fixed top-0 left-0 right-0 z-[200] flex items-start justify-center w-full pt-[100px] px-4 pb-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[244px] top-[255px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]">
+        <a href="workspace.html"
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3499 14.5H1.6499C3.9099 10.23 6.4999 5.9 9.3499 1.5L22.3499 14.5Z" stroke="#1E1E1E"
+                        stroke-opacity="0.4" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+
+            </span>
+            <p class="md:block hidden"> Workspace</p>
+        </a>
+    </span>
+
+    <div class="relative bg-white max-w-[580px] w-full rounded-[20px]">
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-232px] xl:left-[-125px] left-[-60px] xl:top-[146px] top-[170px] 2xl:w-auto xl:w-[120px] w-[58px]">
+            <img src="assets/images/workspace-arrow.svg" alt=""></span>
+
+        <div class="px-5 sm:pt-[90px] pt-[60px] pb-[30px] relative">
+            <button type="button"
+                class="flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 absolute sm:top-[25px] top-4 sm:right-[25px] right-4 close-btn">
+                <img src="assets/images/btn-close.svg" alt="">
+            </button>
+            <h4 class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">Sei
+                nel
+                cuore di Xelean!</h4>
+            <p
+                class="text-black-1200 3xl:mt-6 mt-4 sm:mb-2.5 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[405px] max-w-[332px] w-full mx-auto">
+                Niente celle, tabelle, formule… <br> nel Workspace puoi mettere <br> in relazione i tuoi file grazie ai
+                thread. Scopriamo di più!
+            </p>
+
+            <div class="sm:mb-6 mb-6">
+                <video class="w-full xs:h-[257px] h-[180px]" autoplay="" muted="" loop="">
+                    <source src="assets/images/video/tutorial_FS_1.mp4" type="video/mp4">
+                    <source src="assets/images/video/tutorial_FS_1.mp4" type="video/ogg">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <a href="#"
+                class="bg-sea-green-1100  next-btn rounded-[10px] h-12 max-w-[127px] w-full flex items-center justify-center text-white font-Ubuntu font-medium text-base mx-auto">Avanti
+                <img src="assets/images/arrow-right.svg" alt="" class="ml-2.5"
+                    style="width: 15px !important; height: 15px !important;"></a>
+            <ul class="flex items-center justify-center sm:mt-12 mt-10">
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                        href="dashboard.html"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"
+                        href="archivio.html"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100 active w-4 h-4 flex items-center justify-center"
+                        href="workspace.html"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full next-btn border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                        href="#"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                        href="#"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                        href="#"></a></li>
+                <li class="px-2"><a
+                        class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                        href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<!-- Report Modal................................. -->
+<!-- <div tabindex="-1"
+    class="modal-qui fixed top-0 left-0 right-0 z-[200] flex items-start justify-center w-full pt-[100px] px-4 pb-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[306px] top-[315px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]">
+        <a href="report.html"
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3 h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.2804 7.13859C18.8704 0.508593 13.0304 1.00859 13.0304 1.00859C7.04043 1.22859 3.15043 5.33859 1.71043 7.13859C1.35043 7.56859 1.35043 8.28859 1.71043 8.72859C6.83043 15.2886 13.0304 14.9986 13.0304 14.9986C19.1604 15.0686 22.9804 10.6686 24.3504 8.7986C24.6404 8.2186 24.6404 7.56859 24.2804 7.13859Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                    <path class="path-fill"
+                        d="M14.2604 11.0284C14.1204 10.6684 13.9004 10.3084 13.6804 10.0184C13.4604 9.72836 13.2504 9.36836 12.9604 9.14836C12.8904 9.21836 12.7404 9.36836 12.6704 9.50836C12.6004 9.64836 12.3804 9.86836 12.3104 10.0084C12.2404 10.1484 12.0904 10.3684 11.9504 10.5884C11.8104 10.8084 11.7304 10.9484 11.7304 11.0184H10.1504C10.4404 10.5184 10.7304 10.0084 11.0904 9.50836C11.4504 9.00836 11.8104 8.42836 12.2404 7.84836L10.2204 4.81836H11.8804L13.0304 6.61836L14.2604 4.81836H15.8504L13.8304 7.77837C14.3304 8.42837 14.7704 9.00837 15.1304 9.57837C15.4904 10.1584 15.7104 10.5884 15.9204 10.9484L14.2604 11.0284Z"
+                        fill="#1E1E1E" fill-opacity="0.4"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Report</p>
+        </a>
+    </span>
+
+    <div class="relative w-full max-w-[580px] max-h-full">
+
+        <span
+            class="absolute lg:block hidden 2xl:left-[-232px] xl:left-[-125px] left-[-60px] xl:top-[172px] top-[215px] 2xl:w-auto xl:w-[120px] w-[58px]">
+            <img src="assets/images/report-arrow.svg" alt=""></span>
+
+        <div class="relative bg-white rounded-[20px]">
+            <div class="px-5 sm:pt-[90px] pt-[60px] pb-[30px] relative">
+                <button type="button"
+                    class="flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 absolute sm:top-[25px] top-4 sm:right-[25px] right-4 close-btn">
+                    <img src="assets/images/btn-close.svg" alt="">
+                </button>
+                <h4 class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                    Genera
+                    risultati!</h4>
+                <p
+                    class="text-black-1200 mt-6 sm:mb-8 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[452px] max-w-[332px] w-full mx-auto">
+                    Quando avrai ottenuto risultati soddisfacenti, Xelean ti darà modo di visualizzarli in
+                    <strong>report
+                        multidimensionali. </strong><br>
+                    Ti abbiamo incuriosito? Ci stiamo ancora lavorando, ma presto avremo aggiornamenti!
+                </p>
+
+                <a href="supporto.html"
+                    class="bg-sea-green-1100  next-btn rounded-[10px] h-12 max-w-[127px] w-full flex items-center justify-center text-white font-Ubuntu font-medium text-base mx-auto">Avanti
+                    <img src="assets/images/arrow-right.svg" alt="" class="ml-2.5"
+                        style="width: 15px !important; height: 15px !important;"></a>
+                <ul class="flex items-center justify-center sm:mt-[74px] mt-10">
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="dashboard.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"
+                            href="archivio.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full active [&amp;.active]:bg-sea-green-1100 border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="report.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="supporto.html"></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->
+<!-- ....................Supporto Modal....................  -->
+<!-- <div tabindex="-1"
+    class="modal-qui fixed top-0 left-0 right-0 z-[200] flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <span
+        class="bg-white lg:flex hidden absolute xl:left-3.5 left-1.5 xl:top-[370px] top-[375px] rounded-[20px] xl:p-2.5 p-2 items-center justify-center xl:max-w-[168px] max-w-[136px] w-full xl:h-[69px] h-[58px]">
+        <a href="supporto.html"
+            class="navi-link active bg-sea-green-1100 flex items-center md:justify-start justify-center text-white font-Ubuntu font-medium xl:text-base text-sm leading-none xl:px-5 px-3  h-full w-full rounded-[10px] hover:bg-sea-green-1100 hover:text-white"><span
+                class="w-6 xl:mr-2.5 md:mr-1.5 mr-0">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21 3.56V10.31C21 11.69 19.88 12.81 18.5 12.81H7.43C6.56 12.81 5.74 13.25 5.31 14L1 21V3.5C1 2.12 2.12 1 3.5 1H18.5C19.87 1.06 21 2.12 21 3.56Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-width="1.6" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M7.18994 8.55957C7.8803 8.55957 8.43994 7.99993 8.43994 7.30957C8.43994 6.61921 7.8803 6.05957 7.18994 6.05957C6.49958 6.05957 5.93994 6.61921 5.93994 7.30957C5.93994 7.99993 6.49958 8.55957 7.18994 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M11.0601 8.55957C11.7504 8.55957 12.3101 7.99993 12.3101 7.30957C12.3101 6.61921 11.7504 6.05957 11.0601 6.05957C10.3697 6.05957 9.81006 6.61921 9.81006 7.30957C9.81006 7.99993 10.3697 8.55957 11.0601 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M14.9399 8.55957C15.6303 8.55957 16.1899 7.99993 16.1899 7.30957C16.1899 6.61921 15.6303 6.05957 14.9399 6.05957C14.2496 6.05957 13.6899 6.61921 13.6899 7.30957C13.6899 7.99993 14.2496 8.55957 14.9399 8.55957Z"
+                        stroke="#1E1E1E" stroke-opacity="0.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </span>
+            <p class="md:block hidden"> Supporto</p>
+        </a>
+    </span>
+
+    <div class="relative w-full max-w-[580px] max-h-full">
+        <span
+            class="absolute lg:block hidden 2xl:left-[-200px] xl:left-[-119px] left-[-60px] 2xl:top-[150px] xl:top-[180px] top-[210px] 2xl:w-auto xl:w-[120px] w-[58px]">
+            <img src="assets/images/supporto-arrow.svg" alt=""></span>
+
+        <div class="relative bg-white rounded-[20px]">
+            <div class="px-5 sm:pt-[90px] pt-[60px] pb-[30px] relative">
+                <button type="button"
+                    class="flex items-center justify-center sm:w-8 w-6 sm:h-8 h-6 absolute sm:top-[25px] top-4 sm:right-[25px] right-4 close-btn">
+                    <img src="assets/images/btn-close.svg" alt="" (click)="closeModal()">
+                </button>
+                <h4 class="text-black-1200 text-center font-Ubuntu font-medium sm:text-[34px] text-[26px] leading-none">
+                    Problemi? No problem!
+                </h4>
+                <p
+                    class="text-black-1200 mt-6 sm:mb-8 mb-0 text-center font-Ubuntu font-normal sm:text-[22px] text-lg leading-[34px] sm:max-w-[452px] max-w-[332px] w-full mx-auto">
+                    Xelean è una piattaforma in continuo sviluppo: i problemi sono normali (ahinoi!) e ogni tua
+                    segnalazione è
+                    preziosa. Qui trovi <strong> tutti i modi per contattarci.</strong>
+                </p>
+
+                <a href="dashboard.html"
+                    class="bg-sea-green-1100 rounded-[10px] h-12 max-w-[127px] w-full flex items-center justify-center text-white font-Ubuntu font-medium text-base mx-auto">Inizia</a>
+                <div class="flex items-center justify-center mt-12 cursor-pointer">
+                    <input id="default-checkbox710" type="checkbox" value="" checked=""
+                        class="w-4 h-4  bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                    <label for="default-checkbox710"
+                        class="block ml-2 text-gray-1200 font-semibold text-sm font-Inter leading-none">Non visualizzare
+                        più</label>
+                </div>
+                <ul class="flex items-center justify-center sm:mt-6 mt-10">
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="dashboard.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"
+                            href="archivio.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100  w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="workspace.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full  border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="report.html"></a></li>
+                    <li class="px-2"><a
+                            class="rounded-full active [&amp;.active]:bg-sea-green-1100 border-2 border-solid border-sea-green-1100 w-4 h-4 flex items-center justify-center"
+                            href="supporto.html"></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->
+
+<!---- IMPORT MODAL ------>
+<div class="import-modal">
+    <!-- Main modal -->
+    <div id="default-modal2" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-[1232px] max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+
+                <!-- Modal body -->
+                <div class="md:p-8 p-5">
+                    <div class="flex items-center justify-between mb-5">
+                        <div class="flex sm:items-center items-start sm:flex-row flex-col">
+                            <h3
+                                class="text-xl leading-none md:mr-[38px] sm:mr-5 mb-5 font-semibold text-gray-900 dark:text-white">
+                                Opzioni di importazione
+                            </h3>
+                            <div class="flex items-center">
+                                <label class="switch">
+                                    <input type="checkbox" id="toggleSwitch">
+                                    <span class="slider"></span>
+                                </label>
+                                <span
+                                    class="flex items-center ml-2.5 text-gray-1200 text-sm font-semibold">Avanzate</span>
+                            </div>
+                        </div>
+                        <button type="button" class="" data-modal-hide="default-modal2">
+
+                            <img src="assets/images/round-cross.svg" alt="" class="md:h-auto h-6" />
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap -mx-3">
+                        <div class="w-full px-3 sm:mb-[30px] mb-4">
+                            <label class="block mb-2.5 text-gray-1200 font-semibold text-sm leading-none">Nome
+                                del
+                                file
+                                caricato:</label>
+                            <span
+                                class="border border-solid border-gray-1200/[0.3] h-[38px] rounded-[10px] w-full px-3.5 text-sea-green-1100 font-medium text-sm flex items-center"><img
+                                    src="assets/images/xls-file.svg" alt="" class="mr-2" /> Archivio
+                                Ordini.xlsx</span>
+                        </div>
+                        <div class="sm:w-1/2 w-full px-3 sm:mb-0 mb-4">
+                            <label class="block mb-2.5  text-gray-1200 font-semibold text-sm leading-none">Importa
+                                dalla
+                                riga:</label>
+                            <input type="text"
+                                class="borde border-solid border-gray-1200/[0.3] h-[38px] rounded-[10px] w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                placeholder="2">
+                        </div>
+                        <div class="sm:w-1/2 w-full px-3">
+                            <div class="flex items-center cursor-pointer mb-2.5">
+                                <input id="default-checkbox" type="checkbox" value=""
+                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                <label for="default-checkbox"
+                                    class="text-gray-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">Fino
+                                    allariga</label>
+                            </div>
+                            <input type="text"
+                                class="borde border-solid border-gray-1200/[0.3] h-[38px] rounded-[10px] w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                placeholder="1092">
+                        </div>
+                        <div class="w-full px-3">
+                            <div
+                                class="flex sm:flex-row flex-col items-center justify-between border-b border-solid border-gray-1200/[0.3] sm:pt-[18px] pt-5 sm:pb-[28px] pb-5">
+                                <ul class="flex sm:items-center items-start sm:flex-row flex-col sm:w-auto w-full">
+                                    <li class="sm:mr-6 mb-0">
+                                        <div class="flex items-center cursor-pointer mb-2.5">
+                                            <input id="default-checkbox2" type="checkbox" value=""
+                                                class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                            <label for="default-checkbox2"
+                                                class="text-gray-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">Rimuovi
+                                                l’intestazione</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex items-center cursor-pointer mb-2.5">
+                                            <input id="default-checkbox3" type="checkbox" value=""
+                                                class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                            <label for="default-checkbox3"
+                                                class="text-gray-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">Rimuovi
+                                                righe duplicate</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a href="#"
+                                    class="text-white font-Ubuntu font-medium text-sm flex items-center justify-center bg-sea-green-1100 hover:bg-purple-1100  rounded-[10px] h-[34px] max-w-[73px] w-full ml-auto">Applica</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:mt-6 sm:mb-[26px] my-5">
+                        <h4 class="text-black-1200 mb-2  font-Ubuntu font-medium text-sm leading-[18px]">
+                            Informazioni
+                            estratte:
+                        </h4>
+                        <p class="text-gray-1200  mb-2 font-Ubuntu font-medium text-sm leading-[18px]">
+                            Numero
+                            colonne
+                            estratte:
+                            <strong class="text-black-1200"> 1090 </strong>
+                        </p>
+                        <p class="text-gray-1200 font-Ubuntu font-medium text-sm leading-[18px]">Nome foglio
+                            di
+                            calcolo:
+                            <strong class="text-black-1200"> Archivio ordini 2023 </strong>
+                        </p>
+                    </div>
+                    <div id="content" class="content pt-[26px] border-t border-solid border-gray-1200/[0.3]"
+                        style="display:none;">
+                        <h4 class="text-black-1200 font-medium sm:text-xl text-lg leading-[18px]">Crea nuova
+                            colonna
+                            da
+                            nome file
+                        </h4>
+                        <div class="bg-gray-1700 py-2.5 px-5 rounded-xl -mx-5 my-[30px]">
+                            <div class="flex flex-wrap -mx-3">
+                                <div class="sm:w-1/2 w-full px-3 sm:mb-0 mb-4">
+                                    <label
+                                        class="block mb-2.5  text-gray-1200 font-semibold text-sm leading-none">Formula
+                                        di
+                                        estrazione</label>
+                                    <input type="text"
+                                        class="borde border-solid border-gray-1200/[0.3] h-[38px] rounded-[10px] bg-white w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                        placeholder="">
+                                </div>
+                                <div class="sm:w-1/2 w-full px-3">
+                                    <label class="block mb-2.5  text-gray-1200 font-semibold text-sm leading-none">Nome
+                                        colonna</label>
+                                    <input type="text"
+                                        class="borde border-solid border-gray-1200/[0.3] h-[38px] rounded-[10px] bg-white w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                        placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex sm:flex-row flex-col items-center justify-between">
+                            <div class="flex items-center cursor-pointer sm:w-auto w-full sm:mb-0 mb-4">
+                                <input id="default-checkbox4" type="checkbox" value=""
+                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                <label for="default-checkbox4"
+                                    class="text-gray-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">Riordina
+                                    le colonne manualmente</label>
+                            </div>
+                            <a href="#"
+                                class="text-white font-Ubuntu font-medium text-sm flex items-center justify-center bg-sea-green-1100 hover:bg-purple-1100  rounded-[10px] h-[34px] max-w-[73px] w-full ml-auto">Applica</a>
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-8 colonna-table md:overflow- overflow-auto">
+                        <table class="md:w-full w-[994px] border-spacing-y-[10px] border-separate">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="text-gray-1200 font-Ubuntu text-left font-medium text-xs leading-none bg-gray-1300/[0.5] py-2.5 px-3 rounded-l-lg">
+                                        Colonna</th>
+                                    <th class="bg-gray-1300/[0.5] py-2.5 px-3"></th>
+                                    <th
+                                        class="text-gray-1200 font-Ubuntu text-left font-medium text-xs leading-none bg-gray-1300/[0.5] py-2.5 px-3">
+                                        Tipo campo</th>
+                                    <th class="bg-gray-1300/[0.5] py-2.5 px-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                </tr>
+                                <tr class="align-top">
+                                    <td class="border-b w-[40%] py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox5" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox5"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-4 my-2 justify-between">
+                                                <label
+                                                    class="block  text-gray-1200 font-normal text-sm leading-none">Separazione
+                                                    migliaia:</label>
+                                                <input type="text"
+                                                    class="borde border-solid max-w-[100px] border-gray-1200/[0.3] h-5 rounded-md w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                                    placeholder="">
+                                            </div>
+                                            <div class="flex items-center gap-4 justify-between">
+                                                <label
+                                                    class="block  text-gray-1200 font-normal text-sm leading-none">Separazione
+                                                    migliaia:</label>
+                                                <input type="text"
+                                                    class="borde border-solid max-w-[100px] border-gray-1200/[0.3] h-5 rounded-md w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-4 my-2 justify-between">
+                                                <label
+                                                    class="block  text-gray-1200 font-normal text-sm leading-none">Formato:</label>
+                                                <input type="date"
+                                                    class="borde border-solid max-w-[200px] border-gray-1200/[0.3] h-5 rounded-md w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                                    placeholder="">
+                                            </div>
+                                            <div class="flex items-center gap-4 justify-between">
+                                                <label
+                                                    class="block  text-gray-1200 font-normal text-sm leading-none">Personalizzato:</label>
+                                                <input type="text"
+                                                    class="borde border-solid max-w-[200px] border-gray-1200/[0.3] h-5 rounded-md w-full px-3.5 text-gray-1600 placeholder:text-black-1200 focus:ring-sea-green-1100 focus:border-sea-green-1100 font-medium text-sm"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox6" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox6"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox7" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox7"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid w-[26%] border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b py-1.5 px-3 w-[26%] border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox7" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox7"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox5" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox5"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox6" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox6"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b py-1.5 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox7" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox7"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid w-[26%] border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b py-1.5 px-3 w-[26%] border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/sort-icon.svg" alt="" class="mr-1" />
+                                            <div class="flex items-center cursor-pointer">
+                                                <input id="default-checkbox7" type="checkbox" value=""
+                                                    class="w-4 h-4 text-sea-green-1100 bg-white border-black-1200/[0.4] rounded focus:ring-transparent focus:ring-0">
+                                                <label for="default-checkbox7"
+                                                    class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">CodiceCliente</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-1.5 px-3">
+                                        <span class="flex items-center">
+                                            <svg width="11" height="13" class="mr-2.5" viewBox="0 0 18 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4561 16.0358H16.4999" stroke="#AAAAAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.65001 2.16233C10.2964 1.38982 11.4583 1.27655 12.2469 1.90978C12.2905 1.94413 13.6912 3.03232 13.6912 3.03232C14.5575 3.55599 14.8266 4.66925 14.2912 5.51882C14.2627 5.56432 6.34329 15.4704 6.34329 15.4704C6.07981 15.7991 5.67986 15.9931 5.25242 15.9978L2.21961 16.0358L1.53628 13.1436C1.44055 12.7369 1.53628 12.3098 1.79975 11.9811L9.65001 2.16233Z"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.18408 4.00073L12.7276 7.49" stroke="#AAAAAA"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+
+                                            Rinomina</span>
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 px-3"></td>
+                                    <td class="border-b border-solid border-gray-1300 py-1.5 pl-3 pr-0">
+                                        <div class="relative">
+                                            <select id="" class="js-states form-control single">
+                                                <option><span>TT</span>Testo</option>
+                                                <option><span>TT123</span>Javascript</option>
+                                                <option><span>.00</span>PHP</option>
+                                                <option><span>file</span>Visual Basic</option>
+                                            </select>
+                                            <strong class="absolute top-1/2 -translate-y-1/2 left-2.5"><img
+                                                    src="images/name-icon.svg" alt="" /></strong>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" data-modal-hide="default-modal2" data-modal-target="default-modal3"
+                        data-modal-toggle="default-modal3"
+                        class="text-white font-Ubuntu hover:bg-purple-1100  font-medium text-sm flex items-center justify-center bg-sea-green-1100 rounded-[10px] h-[34px] max-w-[90px] w-full ml-auto">Avanti
+                        <img class="ml-2.5" src="images/arrow-left.svg" alt=""
+                            style="width: 30px !important; height: 20px !important;" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---- DEDTINATION MODAL ------>
+<div class="import-modal destination-modal">
+    <!-- Main modal -->
+    <div id="default-modal3" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-[1232px] max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+
+                <!-- Modal body -->
+                <div class="md:p-8 p-5">
+                    <div class="flex items-center justify-between mb-5">
+                        <h3 class="text-xl leading-none mr-[38px] font-semibold text-gray-900 dark:text-white">
+                            Destinazione
+                        </h3>
+                        <button type="button" class="" data-modal-hide="default-modal3">
+                            <img src="images/round-cross.svg" alt="" class="md:h-auto h-6">
+                        </button>
+                    </div>
+                    <div class="mt-3 sm:mb-8 mb-5 sm:overflow-x-hidden overflow-x-auto">
+                        <table class="sm:w-full w-[480px] border-spacing-y-[10px] border-separate">
+                            <thead>
+                                <tr>
+                                    <th
+                                        class="text-gray-1200 font-Ubuntu text-left font-medium text-xs leading-none bg-gray-1300/[0.5] py-2.5 px-3 rounded-l-lg">
+                                        Nome</th>
+                                    <th
+                                        class="text-gray-1200 font-Ubuntu text-left font-medium text-xs leading-none bg-gray-1300/[0.5] py-2.5 px-3">
+                                        Data</th>
+                                    <th
+                                        class="text-gray-1200 font-Ubuntu text-left font-medium text-xs leading-none bg-gray-1300/[0.5] py-2.5 px-3">
+                                        Azioni</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                    <td class="p-0"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/fl-icon.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                B&B
+                                                Roma</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        14.12.2023
+                                    </td>
+
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/fl-icon.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                B&B Napoli</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        12.12.2023
+                                    </td>
+
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/text-img.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                Test</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        22.11.2023
+                                    </td>
+
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/text-img.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                Alpha</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        20.11.2023
+                                    </td>
+
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/csv-icon.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                Dati negozio Roma</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        15.12.2023
+                                    </td>
+
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b w-[40%] py-3 px-3 border-solid border-gray-1300">
+                                        <div class="flex items-center">
+                                            <img src="images/xls-icon.svg" alt="" class="mr-1" />
+                                            <h4
+                                                class="text-black-1200 cursor-pointer font-Ubuntu font-medium text-sm leading-none ml-2.5">
+                                                Dati negozio Milano</h4>
+                                        </div>
+                                    </td>
+                                    <td
+                                        class="text-black-1200/[0.4] border-b border-solid border-gray-1300 font-Ubuntu font-normal text-sm leading-none py-3 px-3">
+                                        18.12.2023
+                                    </td>
+                                    <td class="border-b border-solid border-gray-1300 py-3 px-3">
+                                        <ul class="flex items-center">
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/edit-gray.svg" alt="" /></a>
+                                            </li>
+                                            <li class="mr-3">
+                                                <a href="#"><img src="images/expend-icon.svg" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="images/delet-icon.svg" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="flex items-center justify-end">
+                        <li>
+                            <a href="#" data-modal-hide="default-modal3" data-modal-target="default-modal2"
+                                data-modal-toggle="default-modal2"
+                                class="text-sea-green-1100 indietro-btn font-Ubuntu font-medium text-sm flex items-center hover:border-purple-1100  hover:text-purple-1100  justify-center bg-transparent border border-solid border-sea-green-1100 rounded-[10px] h-[34px] w-[102px]  ml-auto">
+                                <svg width="14" height="12" class="mr-2.5" viewBox="0 0 14 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.1875 6.20508L12.4375 6.20508" stroke="#20C9BB" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M5.72485 10.7242L1.18735 6.20625L5.72485 1.6875" stroke="#20C9BB"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                                Indietro</a>
+                        </li>
+                        <li class="ml-5">
+                            <a href="archivio.html"
+                                class="text-white font-Ubuntu font-medium text-sm flex items-center hover:bg-purple-1100  justify-center bg-sea-green-1100 rounded-[10px] h-[34px] w-[102px]  ml-auto">
+                                <img class="mr-2.5" src="images/import-icon.svg" alt="" /> Importa </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
